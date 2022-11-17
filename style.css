@@ -38,10 +38,6 @@ html:focus-within {
   scroll-behavior: smooth;
 }
 
-/*  3. Allow percentage-based heights in the application */
-html, body {
-    height: 100%;
-  }
 
 /* Set core body defaults */
 body {
@@ -124,8 +120,12 @@ select {
 body{
   font-size: var(--fs-300);
   font-family: var(--ff-Inter);
+  position: relative;
 }
 /*header*/
+header{
+  position: relative;
+}
 header .container{
   padding: 1.5em 0;
 }
@@ -138,10 +138,69 @@ header .container{
   border: 0;
   background-color: transparent;
   cursor: pointer;
+  display: none;
 }
 
-.nav__toggle .close{
+.icon__close{
   display: none;
+}
+
+a{
+  text-decoration: none;
+  color: var(--clr-neutral-veryDarkBlue);
+}
+@media (max-width: 35em){
+  .primary__navigation{
+    position: fixed;
+    inset: 0 0 0 30%;
+
+    z-index: 100;
+    padding-top: 7rem; 
+    background-color: var(--clr-neutral-offWhite );
+    
+    transform: translateX(100%);
+    transition: transform 250ms ease-in;
+  }
+
+  .primary__navigation[data-visible="true"]{
+    transform: translateX(0%);
+  }
+  
+  .nav__toggle[aria-expanded="true"]{
+    position: fixed;
+    right: 1rem;
+  }
+  .nav__toggle[aria-expanded="true"] .icon__burguer{
+    display: none;
+  }
+
+  .nav__toggle[aria-expanded="true"] .icon__close{
+    display: block;
+  }
+
+
+
+  .nav__list{
+    padding-left: 3.5em;
+    margin: 0 0;
+  }
+
+  .nav__toggle{
+    display: block;
+    position: absolute;
+    right: 1rem;
+    z-index: 9999;
+  }
+
+  .active::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(45, 45, 65, 0.445);
+  }
 }
 
 /*main*/
@@ -242,6 +301,7 @@ aside .content:not(:last-child) p{
   border: 0;
   background-color: var(--clr-primary-softRed);
   color: var(--clr-neutral-offWhite);
+  cursor: pointer;
 }
 
 .container{
@@ -273,4 +333,8 @@ aside .content:not(:last-child) p{
   clip: rect(0,0,0,0) !important;
   white-space: nowrap !important;
   border: 0 !important;
+}
+
+.flow > * + *:not(:first-child){
+  margin-top:var(--flow,1em);
 }

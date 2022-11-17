@@ -19,14 +19,14 @@
         <img class="logo" src="assets/images/logo.svg" alt="W.">
       </a>
 
-      <button class="nav__toggle" aria-controls="primary__navigation">
+      <button class="nav__toggle" aria-controls="primary__navigation" aria-expanded="false">
         <span class="visually-hidden">Menu</span>
-        <img class="hamburguer" src="assets/images/icon-menu.svg" alt="" aria-hidden="true">
-        <img class="close" src="assets/images/icon-menu-close.svg" alt="" aria-hidden="true">
+        <img class="icon__burguer" src="assets/images/icon-menu.svg" alt="" aria-hidden="true">
+        <img class="icon__close" src="assets/images/icon-menu-close.svg" alt="" aria-hidden="true">
       </button>
       
-      <nav id="primary__navigation" class="primary__navigation" style="display: none;">
-        <ul role="list" class="nav-list row">
+      <nav id="primary__navigation" class="primary__navigation" data-visible="false">
+        <ul role="list" class="nav-list | flow">
           <li><a href="#">Home</a></li>
           <li><a href="#">New</a></li>
           <li><a href="#">Popular</a></li>
