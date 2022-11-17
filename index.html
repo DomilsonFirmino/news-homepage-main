@@ -4,47 +4,119 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">  
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">  
   <title>Frontend Mentor | News homepage</title>
 
 </head>
 <body>
 
-  Home
-  New
-  Popular
-  Trending
-  Categories
+  <header>
 
-  The Bright Future of Web 3.0?
+    <div class="logo">
+      <img src="assets/images/logo.svg" alt="W.">
+    </div>
 
-  We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
-  But is it really fulfilling its promise?
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">New</a></li>
+        <li><a href="#">Popular</a></li>
+        <li><a href="#">Trending</a></li>
+        <li><a href="#">Categories</a></li>
+      </ul>
+    </nav>
 
-  Read more
+  </header>
 
-  New 
+  <main>
+    
+      <section>
 
-  Hydrogen VS Electric Cars
-  Will hydrogen-fueled cars ever catch up to EVs?
+        <picture>
+          <source media="(min-width: 50em)" srcset="assets/images/image-web-3-desktop.jpg">
+          <img src="assets/images/image-web-3-mobile.jpg">
+        </picture>
+        
+        <div class="content">
+          
+          <h1>The Bright Future of Web 3.0?</h1>
+          
+          <div>
+            <p>
+              We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people.
+              But is it really fulfilling its promise?
+            </p>
+            <button>Read more</button>
+          </div>
 
-  The Downsides of AI Artistry
-  What are the possible adverse effects of on-demand AI image generation?
+        </div>
+    
+      </section>
+    
+      <aside>
+    
+        <h2>New</h2>
+        <div class="content">
+          <h3>Hydrogen VS Electric Cars</h3>
+          <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+        </div>
+    
+        <div class="content">
+          <h3>The Downsides of AI Artistry</h3>
+          <p>What are the possible adverse effects of on-demand AI image generation?</p>
+        </div>
+    
+        <div class="content">
+          <h3>Is VC Funding Drying Up?</h3>
+          <p>Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+        </div>
+    
+      </aside>
+    
+      <section class="cards">
+    
+        <div class="card row">
+    
+          <div class="col">
+            <img src="assets/images/image-retro-pcs.jpg" alt="Reviving Retro PCs">
+          </div>
+          <div class="col">
+            <p>01</p>
+            <h2>Reviving Retro PCs</h2>
+            <p>What happens when old PCs are given modern upgrades?</p>
+          </div>
+        </div>
 
-  Is VC Funding Drying Up?
-  Private funding by VC firms is down 50% YOY. We take a look at what that means.
 
-  01
-  Reviving Retro PCs
-  What happens when old PCs are given modern upgrades?
+        <div class="card row">
+    
+          <div class="col"><img src="assets/images/image-top-laptops.jpg" alt="Top 10 Laptops of 2022"></div>
+          <div class="col">
+            <p>02</p>
+            <h2>Top 10 Laptops of 2022</h2>
+            <p>Our best picks for various needs and budgets.</p>
+          </div>
+    
+        </div>
 
-  02
-  Top 10 Laptops of 2022
-  Our best picks for various needs and budgets.
 
-  03
-  The Growth of Gaming
-  How the pandemic has sparked fresh opportunities.
+        <div class="card row">
+          <div class="col">
+            <img src="assets/images/image-gaming-growth.jpg" alt="The Growth of Gaming">
+          </div>
+    
+          <div class="col">
+            <p>03</p>
+            <h2>The Growth of Gaming</h2>
+            <p>How the pandemic has sparked fresh opportunities.</p>
+          </div>
+        </div>
+    
+      </section>
+    
+  </main>
+
   <script src="script.js"></script>
 </body>
 </html>
