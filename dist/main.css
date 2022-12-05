@@ -249,6 +249,10 @@ header .container .nav__list {
   display: flex;
   justify-content: space-between;
   font-size: var(--fs-500);
+  font-weight: var(--fw-semibold);
+}
+header .container .nav__list li:hover {
+  color: var(--clr-primary-softRed);
 }
 header .container .nav__list li + li {
   margin-left: 2rem;
@@ -312,6 +316,9 @@ main .second .flow h3 {
   color: var(--clr-neutral-offWhite);
   margin-bottom: 0.4em;
 }
+main .second .flow h3:hover {
+  color: var(--clr-primary-softOrange);
+}
 main .second .flow div + div {
   padding-top: 1.5rem;
   border-top: 1px solid var(--clr-neutral-grayishBlue);
@@ -355,6 +362,9 @@ main .third .card h2 {
   color: var(--clr-neutral-veryDarkBlue);
   margin-bottom: 0.5rem;
 }
+main .third .card h2:hover {
+  color: var(--clr-primary-softRed);
+}
 main .third .card p {
   font-size: var(--fs-500);
 }
@@ -371,4 +381,8 @@ main .third .card p {
   background-color: var(--clr-primary-softRed);
   color: var(--clr-neutral-offWhite);
   cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--clr-neutral-veryDarkBlue);
 }/*# sourceMappingURL=main.css.map */

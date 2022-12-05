@@ -60,7 +60,11 @@ header{
             display: flex;
             justify-content: space-between;
             font-size: var(--fs-500);
-
+            font-weight: var(--fw-semibold);
+            
+            li:hover{
+                color: var(--clr-primary-softRed);
+            }
             li + li{
                 margin-left: 2rem;
             }
@@ -130,6 +134,9 @@ main{
                 color: var(--clr-neutral-offWhite);
                 margin-bottom: .4em;
             }
+            h3:hover{
+                color: var(--clr-primary-softOrange);
+            }
             div + div{
                 padding-top: 1.5rem;
                 border-top: 1px solid var(--clr-neutral-grayishBlue);
@@ -178,6 +185,9 @@ main{
                 color: var(--clr-neutral-veryDarkBlue);
                 margin-bottom: .5rem;
             }
+            h2:hover{
+                color: var(--clr-primary-softRed);
+            }
 
             p{
                 font-size: var(--fs-500);
@@ -185,7 +195,6 @@ main{
 
             @media (min-width: 50em){
                 --flow: 0;
-                
             }
         }
     }   
