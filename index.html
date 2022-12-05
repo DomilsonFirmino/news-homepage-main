@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="style.css">  
+  <link rel="stylesheet" href="dist/main.css">  
   <title>Frontend Mentor | News homepage</title>
 
 </head>
@@ -13,10 +13,10 @@
 
   <header>
 
-    <div class="container | row space-between align-center">
+    <div class="container">
 
-      <a class="logo">
-        <img class="logo" src="assets/images/logo.svg" alt="W.">
+      <a href="#">
+        <img src="assets/images/logo.svg" alt="W.">
       </a>
 
       <button class="nav__toggle" aria-controls="primary__navigation" aria-expanded="false">
@@ -26,7 +26,7 @@
       </button>
       
       <nav id="primary__navigation" class="primary__navigation" data-visible="false">
-        <ul role="list" class="nav-list | flow">
+        <ul role="list" class="nav-list | text-size-300">
           <li><a href="#">Home</a></li>
           <li><a href="#">New</a></li>
           <li><a href="#">Popular</a></li>
@@ -39,52 +39,52 @@
 
   </header>
 
-  <main>
+  <main class="container | flow">
     
-      <section class="first | container">
+      <section class="first flow">
 
         <picture>
           <source media="(min-width: 50em)" srcset="assets/images/image-web-3-desktop.jpg">
           <img src="assets/images/image-web-3-mobile.jpg">
         </picture>
         
-        <div class="content">
+        <div class="content flow" style="--flow: 1.5rem">
           
-          <h1>The Bright Future of Web 3.0?</h1>
+          <h1 class="line-tight text-bold text-size-700 clr-veryDarkBlue">The Bright Future of Web 3.0?</h1>
           
-          <div>
+          <div class="flow">
             <p>
-              We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people.
-              But is it really fulfilling its promise?
+                We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people.
+                But is it really fulfilling its promise?
             </p>
-            <button class="btn | fw-bold">Read more</button>
+            <button class="btn | text-bold ">Read more</button>
           </div>
 
         </div>
     
       </section>
     
-      <aside class="second | container bg-darkBlue padding">
+      <aside class="second">
     
-        <h2 class="accent">New</h2>
-        <div class="content">
-          <h3>Hydrogen VS Electric Cars</h3>
-          <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
-        </div>
-    
-        <div class="content">
-          <h3>The Downsides of AI Artistry</h3>
-          <p>What are the possible adverse effects of on-demand AI image generation?</p>
-        </div>
-    
-        <div class="content">
-          <h3>Is VC Funding Drying Up?</h3>
-          <p>Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+        <div class="flow">
+          <h2 class="text-bold text-size-600">New</h2>
+          <div class="content">
+            <h3>Hydrogen VS Electric Cars</h3>
+            <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+          </div>
+          <div class="content">
+            <h3>The Downsides of AI Artistry</h3>
+            <p>What are the possible adverse effects of on-demand AI image generation?</p>
+          </div>
+          <div class="content">
+            <h3>Is VC Funding Drying Up?</h3>
+            <p>Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+          </div>
         </div>
     
       </aside>
     
-      <section class="third | container cards">
+      <section class="third flow">
     
         <div class="card">
     
