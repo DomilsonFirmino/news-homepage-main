@@ -1,6 +1,6 @@
 .container{  
     --max-width: 80em;
-    --padding: 2rem;
+    --padding: 4rem;
   
     width: min(var(--max-width) , 100% - var(--padding));
     margin-inline: auto;
@@ -23,26 +23,97 @@ header{
     position: relative;
     
     .container{
-        padding: 1.5em 0;
+        
+        padding: 1em 0;
         display: flex;
         justify-content: space-between;
+        align-items: center;
 
         .logo{
             width: 3rem;
         }
+        button{
+            border: 0;
+            background-color: transparent;
+            
+            img{
+                width: 2rem;
+                height: 1.5rem;
 
-        .nav__toggle,
+            }
+            .icon__close{
+                display: none;
+            }
+            @media (min-width: 50em) {
+                display: none;
+            }
+        }
+
         .primary__navigation{
             display: none;
-        }
+            @media (min-width: 50em){
+                   display: block;   
+            }
+        } 
         
+        .nav__list{
+            display: flex;
+            justify-content: space-between;
+            font-size: var(--fs-500);
+
+            li + li{
+                margin-left: 2rem;
+            }
+        }
+     
     }
    
 }
 
 main{
-    --flow: 3rem;
 
+    --flow: 3rem;
+    @media(min-width: 50em){
+        display: grid;
+        row-gap: 2.2rem;
+        column-gap: 1.5rem;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .first{
+        @media (min-width: 50em){
+            grid-column: span 2;
+
+            display: grid;
+            grid-template-columns: subgrid;
+
+            picture{
+                grid-column: span 2;
+            }
+        }
+
+        picture img{
+            height: 100%;
+            width: 100%;
+        }
+        &__content{
+            grid-column: span 2;
+            display: grid;
+            grid-template-columns: subgrid;
+
+            h1{
+                font-size: clamp(2.5rem, 1.2vw + 2.6rem , 3.2rem);
+                align-self: center;
+
+                @media (min-width: 50em){
+                   max-width: 12ch;                    
+                }
+            }
+            p{
+                font-size: var(--fs-500);
+            }
+        }
+    }
     .second{
         padding: var(--padding-500);
         background-color: var(--clr-neutral-veryDarkBlue);
@@ -64,18 +135,58 @@ main{
                 border-top: 1px solid var(--clr-neutral-grayishBlue);
             }
         }
+
+        @media (min-width: 50em){
+            --flow: 0;
+        }
     }
 
     .third{
 
         
+        margin-bottom: 2rem;
+
+        @media (min-width: 50em){
+            --flow: 0;
+
+            grid-column: span 3;
+            display: grid;
+
+            grid-template-columns: subgrid;
+            
+        }
         .card{
             --flow: 1rem;
             display: grid;
-            grid-template-columns: 1fr 2fr;
+            grid-template-columns: .5fr 1fr;
             column-gap: 1.5rem;
-        }
-        margin-bottom: 2rem;
-    }
+            max-width: clamp(27rem, 2vw + 20rem, 40rem);
 
+
+            img{
+                height: 100%;
+                object-fit: cover;
+            }
+            .number{
+                font-size: var(--fs-600);
+                font-weight: bold;
+                margin-bottom: .5rem;
+            }
+
+            h2{
+                font-size: var(--fs-500);
+                color: var(--clr-neutral-veryDarkBlue);
+                margin-bottom: .5rem;
+            }
+
+            p{
+                font-size: var(--fs-500);
+            }
+
+            @media (min-width: 50em){
+                --flow: 0;
+                
+            }
+        }
+    }   
 }
