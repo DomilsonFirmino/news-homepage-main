@@ -1,7 +1,7 @@
 const navToogle = document.querySelector(".nav__toggle");
 const primaryNav = document.querySelector(".primary__navigation");
 
-navToogle.addEventListener("click", () =>{
+navToogle.addEventListener("click", ()=>{
 
     if(primaryNav.getAttribute("data-visible") === "false"){
         navToogle.setAttribute('aria-expanded',true);
