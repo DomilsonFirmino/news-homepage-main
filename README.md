@@ -13,8 +13,7 @@ This is a solution to the [News homepage challenge on Frontend Mentor](https://w
 
 ### Links
 
-- Solution URL: [News homepage challenge](https://your-solution-url.com)
-- Live Site URL: [news-homepage-main](https://your-live-site-url.com)
+- Live Site URL: [news-homepage-main](https://domilsonfirmino.github.io/news-homepage-main/)
 
 
 #### Built with
